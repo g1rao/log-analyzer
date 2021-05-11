@@ -27,13 +27,13 @@ class Config:
                                 "%b": "bytes",               
                                 "%D": "response-time",       
                                 "%{User-agent}i": "user-agent",          
-                                "%{X-Oracle-UserId}i": "oracle-userid",       
-                                "%{X-Oracle-IdentityDomain}i": "oralce-identitydomain",
+                                "%{X-UserId}i": "userid",       
+                                "%{X-IdentityDomain}i": "oralce-identitydomain",
                                 "%{ECID-Context}i": "ecid-context",        
-                                "%{X-Oracle-RealUserId}i": "oracle-realuserid",   
-                                "%{X-Oracle-CustomerZone}i": "oracle-customerzone", 
+                                "%{X-RealUserId}i": "realuserid",   
+                                "%{X-CustomerZone}i": "customerzone", 
                                 "%{X-HTTP-Method-Override}i": "http-method-override",
-                                "%{X-ORACLE-DMS-ECID}o": "oracle-dms-ecid"     
+                                "%{X-DMS-ECID}o": "dms-ecid"     
                                 }
 
 config = Config('parser.ini')
