@@ -42,9 +42,9 @@ def main():
     
     last_x_mins = (datetime.now() - timedelta(minutes=log_generator.fetch_interval)).strftime('%d/%b/%Y:%H:%M:%S +0000')
     now = datetime.now().strftime('%d/%b/%Y:%H:%M:%S +0000')
-    print("Capturing logs between: %s - %s"%(now.split()[0],last_x_mins.split()[0]))
-    print("Log-file:    %s"%(log_generator.log_file))
-    print("Output-json-file:    %s"%(log_generator.output_json))
+    print("\nCapturing logs between: %s - %s"%(now.split()[0],last_x_mins.split()[0]))
+    print("Log-file: \t\t%s"%(log_generator.log_file))
+    print("Output-json-file: \t%s\n"%(log_generator.output_json))
 
     last_x_mins_data = [x for x in logs if x["date"] <= now and x["date"] >= last_x_mins]
     status_counter = dict(Counter(x['status'] for x in last_x_mins_data if x['status'] in log_generator.error_codes))
