@@ -17,6 +17,7 @@ class Config:
         self.logs_path = all_config.get('logs', 'logs-path')
         self.fetch_interval = int(all_config.get('time-interval', 'fetch-interval'))
         self.output_json = all_config.get('output', 'output-json')
+        self.error_codes = all_config.get('http-codes', 'error-codes').split()
         self.format_mappings = {
                                 "%h": "host",                
                                 "%l": "identd",              
